@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list version="1.0">
 	<fvm_meta theme_code="" is_biz="0" />
-	<theme id="custom" name="Comedy World" thumb="" cc_theme_id="custom" />
 	<theme id="Community" name="Community Library" cc_theme_id="Community"/>
 	<theme id="import" name="Imported Assets" thumb="" />
 	<theme id="retro" name="Cartoon Classics" thumb="ann-stand.swf" />
@@ -11,6 +10,7 @@
 	<theme id="action" name="Lil' Peepz" thumb="" cc_theme_id="action" />
 	<theme id="animal" name="Lil' Petz" thumb="" />
 	<theme id="politics2" name="White Houserz" thumb="" />
+	<theme id="peppa" name="Peppa Pig World" thumb="" cc_theme_id="peppa" />
 	<theme id="chibi" name="Chibi Peepz" thumb="" cc_theme_id="chibi" />
 	<theme id="space" name="Space Peepz" thumb="" />
 	<theme id="ninja" name="Chibi Ninjas" thumb="" cc_theme_id="ninja" />
