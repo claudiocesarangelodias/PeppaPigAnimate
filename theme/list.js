@@ -20,6 +20,7 @@
 "ninjaanime"
 "politic"
 "politics2"
+"peppa"
 "retro"
 "sf"
 "space"
