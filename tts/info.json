@@ -1,4 +1,4 @@
-﻿{
+{
 	"languages": {
 		"th": "Thai",
 		"el": "Greek",
@@ -3639,6 +3639,14 @@
 			"source": "voiceforge",
 			"arg": "Marta",
 			"desc": "Marta"
-		}
+		},
+        	"peppa_pig_old": {
+            		"country": "GB",
+            		"language": "en",
+            		"gender": "M",
+            		"source": "fakeyou",
+            		"arg": "Peppa Pig (Old)",
+            		"desc": "Peppa Pig (Old)"
+        	}
 	}
 }
