@@ -258,6 +258,39 @@ module.exports = function (voiceName, text) {
 				);
 				break;
 			}
+			case "fakeyou": {
+				const req = https.request(
+					{
+						hostname: "fakeyou.com",
+						path: "/clone",
+						method: "POST",
+						headers: {
+							"content-type": "text/xml",
+							"accept-encoding": "gzip, deflate, br",
+							origin: "https://fakeyou.com/",
+							referer: "https://fakeyou.com/clone",
+							"x-requested-with": "XMLHttpRequest",
+							cookie: "Drupal.visitor.liveDemo=666",
+						},
+					},
+					(r) => {
+						var buffers = [];
+						r.on("data", (d) => buffers.push(d));
+						r.on("end", () => {
+							const xml = String.fromCharCode.apply(null, brotli.decompress(Buffer.concat(buffers)));
+							const beg = xml.indexOf("https://fakeyou.s3.amazonaws.com/");
+							const end = xml.indexOf(".mp3", beg) + 4;
+							const loc = xml.substr(beg, end - beg).toString();
+							get(loc).then(res).catch(rej);
+						});
+						r.on("error", rej);
+					}
+				);
+				req.end(
+					`<speakExtended key='6666'><voice>${voice.arg}</voice><text>${text}</text><audioFormat>mp3</audioFormat></speakExtended>`
+				);
+				break;
+			}
 		}
 	});
 };
